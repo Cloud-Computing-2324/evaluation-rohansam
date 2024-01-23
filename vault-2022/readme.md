@@ -1,6 +1,6 @@
 # Hashicorp Vault Guide
 
-<a href="https://youtu.be/2Owo4Ioo9tQ" title="hashicorp-vault"><img src="https://i.ytimg.com/vi/2Owo4Ioo9tQ/hqdefault.jpg" width="20%" alt="introduction hashicorp vault" /></a>
+alt="introduction hashicorp vault" /></a>
 
 Requirements:
 
@@ -13,7 +13,7 @@ If you are watching the old guide for Kubernetes 1.17, go [here](..\vault\readme
 Lets create a Kubernetes cluster to play with using [kind](https://kind.sigs.k8s.io/docs/user/quick-start/)
 
 ```
-cd hashicorp/vault-2022
+cd vault-2022
 
 kind create cluster --name vault --image kindest/node:v1.21.1 --config kind.yaml
 ```
@@ -67,7 +67,7 @@ Let's find what versions of Consul are available:
 helm search repo hashicorp/consul --versions
 ```
 
-We can use chart `0.39.0` which is the latest at the time of this demo
+We can use chart `1.3.1` which is the latest at the time of this demo
 Let's create a manifests folder and grab the YAML:
 
 ```
@@ -76,7 +76,7 @@ mkdir manifests
 
 helm template consul hashicorp/consul \
   --namespace vault \
-  --version 0.39.0 \
+  --version 1.3.1 \
   -f consul-values.yaml \
   > ./manifests/consul.yaml
 ```
@@ -117,7 +117,7 @@ Let's find what versions of vault are available:
 helm search repo hashicorp/vault --versions
 ```
 
-In this demo I will use the `0.19.0` chart </br>
+In this demo I will use the `0.27.0` chart </br>
 
 Let's firstly create a `values` file to customize vault.
 Let's grab the manifests:
@@ -125,7 +125,7 @@ Let's grab the manifests:
 ```
 helm template vault hashicorp/vault \
   --namespace vault \
-  --version 0.19.0 \
+  --version 0.27.0 \
   -f vault-values.yaml \
   > ./manifests/vault.yaml
 ```
