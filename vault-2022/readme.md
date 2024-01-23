@@ -1,13 +1,13 @@
 # Hashicorp Vault Guide
 
-alt="introduction hashicorp vault" /></a>
+
 
 Requirements:
 
 * Kubernetes 1.21
 * Kind or Minikube
 
-For this tutorial, I will be using Kubernetes 1.21.
+For this tutorial, I will be using Kubernetes 1.27.
 If you are watching the old guide for Kubernetes 1.17, go [here](..\vault\readme.md)
 
 Lets create a Kubernetes cluster to play with using [kind](https://kind.sigs.k8s.io/docs/user/quick-start/)
@@ -15,7 +15,7 @@ Lets create a Kubernetes cluster to play with using [kind](https://kind.sigs.k8s
 ```
 cd vault-2022
 
-kind create cluster --name vault --image kindest/node:v1.21.1 --config kind.yaml
+kind create cluster --name vault --image kindest/node:v1.27.1 --config kind.yaml
 ```
 
 Next up, I will be running a small container where I will be doing all the work from:
