@@ -1,0 +1,101 @@
+2024-01-23T21:18:16Z	ERROR	scale_handler	error resolving auth params	{"type": "ScaledObject", "namespace": "default", "name": "nginx-deployment", "triggerIndex": 0, "error": "error parsing cron metadata: error parsing end schedule: expected exactly 5 fields, found 1: [9999-12-31T23:59:59Z]"}
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).buildScalers
+	/workspace/pkg/scaling/scalers_builder.go:99
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).performGetScalersCache
+	/workspace/pkg/scaling/scale_handler.go:357
+github.com/kedacore/keda/v2/pkg/scaling.(*scaleHandler).GetScalersCache
+	/workspace/pkg/scaling/scale_handler.go:282
+github.com/kedacore/keda/v2/controllers/keda.(*ScaledObjectReconciler).getScaledObjectMetricSpecs
+	/workspace/controllers/keda/hpa.go:217
+github.com/kedacore/keda/v2/controllers/keda.(*ScaledObjectReconciler).newHPAForScaledObject
+	/workspace/controllers/keda/hpa.go:72
+github.com/kedacore/keda/v2/controllers/keda.(*ScaledObjectReconciler).createAndDeployNewHPA
+	/workspace/controllers/keda/hpa.go:45
+github.com/kedacore/keda/v2/controllers/keda.(*ScaledObjectReconciler).ensureHPAForScaledObjectExists
+	/workspace/controllers/keda/scaledobject_controller.go:441
+github.com/kedacore/keda/v2/controllers/keda.(*ScaledObjectReconciler).reconcileScaledObject
+	/workspace/controllers/keda/scaledobject_controller.go:280
+github.com/kedacore/keda/v2/controllers/keda.(*ScaledObjectReconciler).Reconcile
+	/workspace/controllers/keda/scaledobject_controller.go:191
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Reconcile
+	/workspace/vendor/sigs.k8s.io/controller-runtime/pkg/internal/controller/controller.go:119
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).reconcileHandler
+	/workspace/vendor/sigs.k8s.io/controller-runtime/pkg/internal/controller/controller.go:316
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).processNextWorkItem
+	/workspace/vendor/sigs.k8s.io/controller-runtime/pkg/internal/controller/controller.go:266
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Start.func2.2
+	/workspace/vendor/sigs.k8s.io/controller-runtime/pkg/internal/controller/controller.go:227
+2024-01-23T21:18:16Z	ERROR	Error getting scalers	{"controller": "scaledobject", "controllerGroup": "keda.sh", "controllerKind": "ScaledObject", "ScaledObject": {"name":"nginx-deployment","namespace":"default"}, "namespace": "default", "name": "nginx-deployment", "reconcileID": "4a79260b-e8a5-4bf7-b796-ee17707f11f3", "error": "error parsing cron metadata: error parsing end schedule: expected exactly 5 fields, found 1: [9999-12-31T23:59:59Z]"}
+github.com/kedacore/keda/v2/controllers/keda.(*ScaledObjectReconciler).getScaledObjectMetricSpecs
+	/workspace/controllers/keda/hpa.go:219
+github.com/kedacore/keda/v2/controllers/keda.(*ScaledObjectReconciler).newHPAForScaledObject
+	/workspace/controllers/keda/hpa.go:72
+github.com/kedacore/keda/v2/controllers/keda.(*ScaledObjectReconciler).createAndDeployNewHPA
+	/workspace/controllers/keda/hpa.go:45
+github.com/kedacore/keda/v2/controllers/keda.(*ScaledObjectReconciler).ensureHPAForScaledObjectExists
+	/workspace/controllers/keda/scaledobject_controller.go:441
+github.com/kedacore/keda/v2/controllers/keda.(*ScaledObjectReconciler).reconcileScaledObject
+	/workspace/controllers/keda/scaledobject_controller.go:280
+github.com/kedacore/keda/v2/controllers/keda.(*ScaledObjectReconciler).Reconcile
+	/workspace/controllers/keda/scaledobject_controller.go:191
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Reconcile
+	/workspace/vendor/sigs.k8s.io/controller-runtime/pkg/internal/controller/controller.go:119
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).reconcileHandler
+	/workspace/vendor/sigs.k8s.io/controller-runtime/pkg/internal/controller/controller.go:316
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).processNextWorkItem
+	/workspace/vendor/sigs.k8s.io/controller-runtime/pkg/internal/controller/controller.go:266
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Start.func2.2
+	/workspace/vendor/sigs.k8s.io/controller-runtime/pkg/internal/controller/controller.go:227
+2024-01-23T21:18:16Z	ERROR	Failed to create new HPA resource	{"controller": "scaledobject", "controllerGroup": "keda.sh", "controllerKind": "ScaledObject", "ScaledObject": {"name":"nginx-deployment","namespace":"default"}, "namespace": "default", "name": "nginx-deployment", "reconcileID": "4a79260b-e8a5-4bf7-b796-ee17707f11f3", "HPA.Namespace": "default", "HPA.Name": "keda-hpa-nginx", "error": "error parsing cron metadata: error parsing end schedule: expected exactly 5 fields, found 1: [9999-12-31T23:59:59Z]"}
+github.com/kedacore/keda/v2/controllers/keda.(*ScaledObjectReconciler).createAndDeployNewHPA
+	/workspace/controllers/keda/hpa.go:47
+github.com/kedacore/keda/v2/controllers/keda.(*ScaledObjectReconciler).ensureHPAForScaledObjectExists
+	/workspace/controllers/keda/scaledobject_controller.go:441
+github.com/kedacore/keda/v2/controllers/keda.(*ScaledObjectReconciler).reconcileScaledObject
+	/workspace/controllers/keda/scaledobject_controller.go:280
+github.com/kedacore/keda/v2/controllers/keda.(*ScaledObjectReconciler).Reconcile
+	/workspace/controllers/keda/scaledobject_controller.go:191
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Reconcile
+	/workspace/vendor/sigs.k8s.io/controller-runtime/pkg/internal/controller/controller.go:119
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).reconcileHandler
+	/workspace/vendor/sigs.k8s.io/controller-runtime/pkg/internal/controller/controller.go:316
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).processNextWorkItem
+	/workspace/vendor/sigs.k8s.io/controller-runtime/pkg/internal/controller/controller.go:266
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Start.func2.2
+	/workspace/vendor/sigs.k8s.io/controller-runtime/pkg/internal/controller/controller.go:227
+2024-01-23T21:18:16Z	ERROR	failed to ensure HPA is correctly created for ScaledObject	{"controller": "scaledobject", "controllerGroup": "keda.sh", "controllerKind": "ScaledObject", "ScaledObject": {"name":"nginx-deployment","namespace":"default"}, "namespace": "default", "name": "nginx-deployment", "reconcileID": "4a79260b-e8a5-4bf7-b796-ee17707f11f3", "error": "error parsing cron metadata: error parsing end schedule: expected exactly 5 fields, found 1: [9999-12-31T23:59:59Z]"}
+github.com/kedacore/keda/v2/controllers/keda.(*ScaledObjectReconciler).Reconcile
+	/workspace/controllers/keda/scaledobject_controller.go:193
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Reconcile
+	/workspace/vendor/sigs.k8s.io/controller-runtime/pkg/internal/controller/controller.go:119
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).reconcileHandler
+	/workspace/vendor/sigs.k8s.io/controller-runtime/pkg/internal/controller/controller.go:316
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).processNextWorkItem
+	/workspace/vendor/sigs.k8s.io/controller-runtime/pkg/internal/controller/controller.go:266
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Start.func2.2
+	/workspace/vendor/sigs.k8s.io/controller-runtime/pkg/internal/controller/controller.go:227
+2024-01-23T21:18:16Z	ERROR	Reconciler error	{"controller": "scaledobject", "controllerGroup": "keda.sh", "controllerKind": "ScaledObject", "ScaledObject": {"name":"nginx-deployment","namespace":"default"}, "namespace": "default", "name": "nginx-deployment", "reconcileID": "4a79260b-e8a5-4bf7-b796-ee17707f11f3", "error": "error parsing cron metadata: error parsing end schedule: expected exactly 5 fields, found 1: [9999-12-31T23:59:59Z]"}
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).reconcileHandler
+	/workspace/vendor/sigs.k8s.io/controller-runtime/pkg/internal/controller/controller.go:329
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).processNextWorkItem
+	/workspace/vendor/sigs.k8s.io/controller-runtime/pkg/internal/controller/controller.go:266
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Start.func2.2
+	/workspace/vendor/sigs.k8s.io/controller-runtime/pkg/internal/controller/controller.go:227
+2024-01-23T21:24:24Z	INFO	Reconciling ScaledObject	{"controller": "scaledobject", "controllerGroup": "keda.sh", "controllerKind": "ScaledObject", "ScaledObject": {"name":"nginx-deployment","namespace":"default"}, "namespace": "default", "name": "nginx-deployment", "reconcileID": "81bc05c3-269b-4d3e-9aeb-238c41f9297f"}
+2024-01-23T21:24:24Z	INFO	Detected resource targeted for scaling	{"controller": "scaledobject", "controllerGroup": "keda.sh", "controllerKind": "ScaledObject", "ScaledObject": {"name":"nginx-deployment","namespace":"default"}, "namespace": "default", "name": "nginx-deployment", "reconcileID": "81bc05c3-269b-4d3e-9aeb-238c41f9297f", "resource": "apps/v1.Deployment", "name": "nginx"}
+2024-01-23T21:24:24Z	INFO	Creating a new HPA	{"controller": "scaledobject", "controllerGroup": "keda.sh", "controllerKind": "ScaledObject", "ScaledObject": {"name":"nginx-deployment","namespace":"default"}, "namespace": "default", "name": "nginx-deployment", "reconcileID": "81bc05c3-269b-4d3e-9aeb-238c41f9297f", "HPA.Namespace": "default", "HPA.Name": "keda-hpa-nginx"}
+2024-01-23T21:24:25Z	INFO	Initializing Scaling logic according to ScaledObject Specification	{"controller": "scaledobject", "controllerGroup": "keda.sh", "controllerKind": "ScaledObject", "ScaledObject": {"name":"nginx-deployment","namespace":"default"}, "namespace": "default", "name": "nginx-deployment", "reconcileID": "81bc05c3-269b-4d3e-9aeb-238c41f9297f"}
+2024-01-23T21:24:25Z	INFO	Reconciling ScaledObject	{"controller": "scaledobject", "controllerGroup": "keda.sh", "controllerKind": "ScaledObject", "ScaledObject": {"name":"nginx-deployment","namespace":"default"}, "namespace": "default", "name": "nginx-deployment", "reconcileID": "6675129b-2427-4052-9839-214284157916"}
+2024-01-23T21:24:25Z	INFO	Detected resource targeted for scaling	{"controller": "scaledobject", "controllerGroup": "keda.sh", "controllerKind": "ScaledObject", "ScaledObject": {"name":"nginx-deployment","namespace":"default"}, "namespace": "default", "name": "nginx-deployment", "reconcileID": "6675129b-2427-4052-9839-214284157916", "resource": "apps/v1.Deployment", "name": "nginx"}
+2024-01-23T21:24:25Z	INFO	scaleexecutor	Successfully set ScaleTarget replicas count to ScaledObject minReplicaCount	{"scaledobject.Name": "nginx-deployment", "scaledObject.Namespace": "default", "scaleTarget.Name": "nginx", "Original Replicas Count": 1, "New Replicas Count": 0}
+2024-01-23T21:24:25Z	INFO	Reconciling ScaledObject	{"controller": "scaledobject", "controllerGroup": "keda.sh", "controllerKind": "ScaledObject", "ScaledObject": {"name":"nginx-deployment","namespace":"default"}, "namespace": "default", "name": "nginx-deployment", "reconcileID": "2476180c-690c-49c0-9902-33b442ba1480"}
+2024-01-23T21:24:25Z	INFO	Detected resource targeted for scaling	{"controller": "scaledobject", "controllerGroup": "keda.sh", "controllerKind": "ScaledObject", "ScaledObject": {"name":"nginx-deployment","namespace":"default"}, "namespace": "default", "name": "nginx-deployment", "reconcileID": "2476180c-690c-49c0-9902-33b442ba1480", "resource": "apps/v1.Deployment", "name": "nginx"}
+2024-01-23T21:25:00Z	INFO	scaleexecutor	Successfully updated ScaleTarget	{"scaledobject.Name": "nginx-deployment", "scaledObject.Namespace": "default", "scaleTarget.Name": "nginx", "Original Replicas Count": 0, "New Replicas Count": 1}
+2024-01-23T21:25:15Z	INFO	Reconciling ScaledObject	{"controller": "scaledobject", "controllerGroup": "keda.sh", "controllerKind": "ScaledObject", "ScaledObject": {"name":"nginx-deployment","namespace":"default"}, "namespace": "default", "name": "nginx-deployment", "reconcileID": "421a468f-80d0-4d42-923a-3f6c3f305627"}
+2024-01-23T21:25:15Z	INFO	Detected resource targeted for scaling	{"controller": "scaledobject", "controllerGroup": "keda.sh", "controllerKind": "ScaledObject", "ScaledObject": {"name":"nginx-deployment","namespace":"default"}, "namespace": "default", "name": "nginx-deployment", "reconcileID": "421a468f-80d0-4d42-923a-3f6c3f305627", "resource": "apps/v1.Deployment", "name": "nginx"}
+2024-01-23T21:27:23Z	INFO	Reconciling ScaledObject	{"controller": "scaledobject", "controllerGroup": "keda.sh", "controllerKind": "ScaledObject", "ScaledObject": {"name":"nginx-deployment","namespace":"default"}, "namespace": "default", "name": "nginx-deployment", "reconcileID": "6065acf9-43b2-4894-afc7-ef9b4ae53d84"}
+2024-01-23T21:27:23Z	INFO	Detected resource targeted for scaling	{"controller": "scaledobject", "controllerGroup": "keda.sh", "controllerKind": "ScaledObject", "ScaledObject": {"name":"nginx-deployment","namespace":"default"}, "namespace": "default", "name": "nginx-deployment", "reconcileID": "6065acf9-43b2-4894-afc7-ef9b4ae53d84", "resource": "apps/v1.Deployment", "name": "nginx"}
+2024-01-23T21:34:58Z	INFO	scaleexecutor	Successfully set ScaleTarget replicas count to ScaledObject minReplicaCount	{"scaledobject.Name": "nginx-deployment", "scaledObject.Namespace": "default", "scaleTarget.Name": "nginx", "Original Replicas Count": 1, "New Replicas Count": 0}
+2024-01-23T21:35:04Z	INFO	scaleexecutor	Successfully updated ScaleTarget	{"scaledobject.Name": "nginx-deployment", "scaledObject.Namespace": "default", "scaleTarget.Name": "nginx", "Original Replicas Count": 0, "New Replicas Count": 1}
+2024-01-23T21:44:58Z	INFO	scaleexecutor	Successfully set ScaleTarget replicas count to ScaledObject minReplicaCount	{"scaledobject.Name": "nginx-deployment", "scaledObject.Namespace": "default", "scaleTarget.Name": "nginx", "Original Replicas Count": 1, "New Replicas Count": 0}
+2024-01-23T21:45:03Z	INFO	scaleexecutor	Successfully updated ScaleTarget	{"scaledobject.Name": "nginx-deployment", "scaledObject.Namespace": "default", "scaleTarget.Name": "nginx", "Original Replicas Count": 0, "New Replicas Count": 1}
